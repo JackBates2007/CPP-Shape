@@ -8,7 +8,7 @@
 class Circle : public Shape
 {
 private:
-
+ 
 	float m_radius = 1;
 
 public:
@@ -21,8 +21,13 @@ public:
 	virtual float GetRadius() { return m_radius; }
 
 	// Mutator
+	virtual void SetRadius(const float size);
 
 	// Define additional methods here:
+	virtual std::string GetType() const { return "Circle"; }
 
+	virtual float GetArea() const;
+
+	virtual float GetPerimeter() const;
 
 };
